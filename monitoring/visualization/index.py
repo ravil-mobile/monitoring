@@ -7,9 +7,9 @@ from .apps import app1, app2
 
 def create_dash_app(flask_app):
   dash_app = dash.Dash(server=flask_app,
-                       name='Board',
+                       name='board',
                        url_base_pathname='/',
-                       external_stylesheets=[dbc.themes.DARKLY])
+                       external_stylesheets=[dbc.themes.FLATLY])
   dash_app.layout = html.Div([
     dcc.Location(id='url', refresh=False),
     html.Div(id='page-content')
@@ -20,7 +20,7 @@ def create_dash_app(flask_app):
 
 
 index_page = html.Div([
-    dcc.Link('Open App1', href='/app1'),
+    dcc.Link('Commit View', href='/app1'),
     html.Br(),
     dcc.Link('Open App2', href='/app2'),
 ])

@@ -10,6 +10,6 @@ __pycache__
 *.swo
 *.swn
 
-meta.csv
+example/meta.csv
 data.db
 monitoring.egg-info
