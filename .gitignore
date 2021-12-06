@@ -1,0 +1,13 @@
+env
+
+__pycache__
+*.pyc
+
+.idea
+.vscode
+.pytest_cache
+*.swp
+*.swo
+*.swn
+
+meta.csv
