@@ -4,11 +4,11 @@
 ```
 virtualenv env
 source ./env/bin/activate
+pip3 install -e .
 pip3 install -r ./requirements.txt
 ```
 
 ## Run the app
 ```
-cd ./monitoring
-python3 ./main.py
+python -m monitoring
 ```

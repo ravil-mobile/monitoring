@@ -1,3 +1,4 @@
+from monitoring.db_manager import DbManager
 import dash
 from dash import dcc
 from dash import html
@@ -22,4 +23,12 @@ def init(app):
   @app.callback(dash.dependencies.Output('page-1-content', 'children'),
                 [dash.dependencies.Input('page-1-dropdown', 'value')])
   def page_1_dropdown(value):
+    print('hello world')
+    with DbManager() as db:
+      db.cursor.execute(f"SELECT * FROM runs")
+      items = db.cursor.fetchall()
+      print(f'num items: {len(items)}')
+      for item in items:
+        print(item)
+
     return 'You have selected "{}"'.format(value)

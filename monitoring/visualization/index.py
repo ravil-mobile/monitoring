@@ -15,11 +15,6 @@ def create_dash_app(flask_app):
     html.Div(id='page-content')
   ])
 
-  '''
-  dash_app.css.append_css({
-    'external_url': 'https://codepen.io/chriddyp/pen/bWLwgP.css'
-  })
-  '''
   init_callbacks(dash_app)
   return dash_app
 

@@ -11,3 +11,5 @@ __pycache__
 *.swn
 
 meta.csv
+data.db
+monitoring.egg-info

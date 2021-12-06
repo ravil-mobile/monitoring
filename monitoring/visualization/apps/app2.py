@@ -1,3 +1,4 @@
+from monitoring.db_manager import DbManager
 import dash
 from dash import dcc
 from dash import html
